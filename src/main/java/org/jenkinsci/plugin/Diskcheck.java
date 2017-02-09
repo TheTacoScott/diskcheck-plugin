@@ -142,7 +142,7 @@ public class Diskcheck extends BuildWrapper {
 		if (PluginImpl.getInstance().isDiskrecyclerenabled()) {
 			if (roundedSize < SpaceThreshold) {
 				log.println("Disk Recycler is Enabled so I am going to wipe off the workspace Directory Now ");
-				String mycommand = "echo $WORKSPACE; rm -rf $WORKSPACE/; df -k .";
+				String mycommand = "echo $WORKSPACE; rm -rf $WORKSPACE/*; df -k .";
 				String mywincommand = "echo Deleting file from %WORKSPACE% && Del /R %WORKSPACE%";
 
 				/**
